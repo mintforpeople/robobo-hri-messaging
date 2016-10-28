@@ -1,7 +1,6 @@
-package com.mytechia.robobo.framework.hri.messaging.gmailBackground;
+package mail.gmailBackground;
 
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.os.Environment;
@@ -10,7 +9,7 @@ import android.util.Log;
 import com.creativityapps.gmailbackgroundlibrary.BackgroundMail;
 import com.mytechia.commons.framework.exception.InternalErrorException;
 import com.mytechia.robobo.framework.RoboboManager;
-import com.mytechia.robobo.framework.hri.messaging.AMessagingModule;
+import mail.AMessagingModule;
 
 import java.io.File;
 import java.io.FileOutputStream;

@@ -1,4 +1,4 @@
-package com.mytechia.robobo.framework.hri.messaging;
+package mail;
 
 import android.graphics.Bitmap;
 

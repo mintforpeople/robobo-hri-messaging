@@ -1,4 +1,4 @@
-package com.mytechia.robobo.framework.hri.messaging;
+package mail;
 
 /**
  * Created by luis on 4/8/16.
