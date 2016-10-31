@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="robobo-framework-0.3.5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.mytechia/robobo-framework/0.3.5/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.mytechia/robobo-framework/0.3.5/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mytechia/robobo-framework/0.3.5/95cbe5339c22479acf6cedfd5567f6185bc0473d/robobo-framework-0.3.5-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mytechia/robobo-framework/0.3.5/95cbe5339c22479acf6cedfd5567f6185bc0473d/robobo-framework-0.3.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
