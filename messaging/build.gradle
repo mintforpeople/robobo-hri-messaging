@@ -25,4 +25,5 @@ dependencies {
     compile 'com.mytechia:robobo-framework:0.3.5'
     compile 'com.github.yesidlazaro:GmailBackground:1.1'
     compile 'org.twitter4j:twitter4j-core:4.0.5'
+    compile 'org.twitter4j:twitter4j-stream:4.0.5'
 }

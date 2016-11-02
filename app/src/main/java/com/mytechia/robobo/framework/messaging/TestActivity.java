@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.mytechia.robobo.framework.RoboboManager;
 import com.mytechia.robobo.framework.exception.ModuleNotFoundException;
+import com.mytechia.robobo.framework.hri.messaging.twitter.IStatus;
 import com.mytechia.robobo.framework.hri.messaging.twitter.ITwitterListener;
 import com.mytechia.robobo.framework.service.RoboboServiceHelper;
 
@@ -92,7 +93,7 @@ public class TestActivity extends AppCompatActivity implements ITwitterListener 
 
         twitterModule.suscribe(this);
 
-        twitterModule.setAutoCheckDelay(10000);
+        twitterModule.setStreaming();
 
     }
 
@@ -142,10 +143,17 @@ public class TestActivity extends AppCompatActivity implements ITwitterListener 
     }
 
     @Override
-    public void onNewMention(ArrayList<String> mentions) {
-        Log.d(TAG,"NEW MENTIONS!");
-        for (String mention :mentions){
-            Log.d(TAG,mention);
-        }
+    public void onNewMention(IStatus mention) {
+        Log.d(TAG,"NEW MENTION!");
+
+            Log.d(TAG,mention.getAuthor());
+            Log.d(TAG,mention.getMessage());
+        twitterModule.updateStatus("Hola, @"+mention.getAuthor()+"!");
+
+    }
+
+    @Override
+    public void onMultipleMentions(ArrayList<IStatus> mentions) {
+
     }
 }

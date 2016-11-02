@@ -22,42 +22,17 @@
 
 package com.mytechia.robobo.framework.hri.messaging.twitter;
 
-import android.util.Log;
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import java.util.Date;
 
 /**
- * Created by luis on 28/10/16.
+ * Created by luis on 2/11/16.
  */
 
-public abstract class ATwitterModule implements ITwitterModule{
-    private HashSet<ITwitterListener> listeners;
+public interface IStatus {
 
-    public ATwitterModule(){
-        listeners = new HashSet<ITwitterListener>();
-    }
+    String getAuthor();
+    String getAuthorName();
+    String getMessage();
+    Date getDate();
 
-    @Override
-    public void suscribe(ITwitterListener listener) {
-        Log.d("Twitter_module", "Suscribed:"+listener.toString());
-        listeners.add(listener);
-    }
-
-    @Override
-    public void unsuscribe(ITwitterListener listener) {
-        listeners.remove(listener);
-    }
-
-    public void notifyMultipleMentions(ArrayList<IStatus> mentions){
-        for (ITwitterListener listener:listeners){
-            listener.onMultipleMentions(mentions);
-        }
-    }
-    public void notifyMention(IStatus mention){
-        for (ITwitterListener listener:listeners){
-            listener.onNewMention(mention);
-        }
-    }
 }

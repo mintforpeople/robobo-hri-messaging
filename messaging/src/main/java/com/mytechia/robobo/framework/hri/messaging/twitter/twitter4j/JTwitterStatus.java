@@ -20,44 +20,51 @@
  *
  ******************************************************************************/
 
-package com.mytechia.robobo.framework.hri.messaging.twitter;
+package com.mytechia.robobo.framework.hri.messaging.twitter.twitter4j;
 
-import android.util.Log;
+import com.mytechia.robobo.framework.hri.messaging.twitter.IStatus;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import java.util.Date;
+
+import twitter4j.Status;
 
 /**
- * Created by luis on 28/10/16.
+ * Created by luis on 2/11/16.
  */
 
-public abstract class ATwitterModule implements ITwitterModule{
-    private HashSet<ITwitterListener> listeners;
+public class JTwitterStatus implements IStatus {
+    private String author;
+    private String message;
+    private Date date;
+    private String authorName;
+    private Status jTwitterSt;
 
-    public ATwitterModule(){
-        listeners = new HashSet<ITwitterListener>();
+    public JTwitterStatus(Status status){
+        this.author = status.getUser().getScreenName();
+        this.authorName = status.getUser().getName();
+        this.date = status.getCreatedAt();
+        this.message = status.getText();
     }
 
     @Override
-    public void suscribe(ITwitterListener listener) {
-        Log.d("Twitter_module", "Suscribed:"+listener.toString());
-        listeners.add(listener);
+    public String getAuthor() {
+        return this.author;
     }
 
     @Override
-    public void unsuscribe(ITwitterListener listener) {
-        listeners.remove(listener);
+    public String getAuthorName() {
+        return this.author;
     }
 
-    public void notifyMultipleMentions(ArrayList<IStatus> mentions){
-        for (ITwitterListener listener:listeners){
-            listener.onMultipleMentions(mentions);
-        }
+    @Override
+    public String getMessage() {
+        return this.message;
     }
-    public void notifyMention(IStatus mention){
-        for (ITwitterListener listener:listeners){
-            listener.onNewMention(mention);
-        }
+
+    @Override
+    public Date getDate() {
+        return this.date;
     }
+
+
 }
