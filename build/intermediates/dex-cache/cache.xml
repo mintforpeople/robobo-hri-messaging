@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/luis/.gradle/caches/modules-2/files-2.1/com.mytechia/mytechia-commons-library/1.3.0/1806e6005023c47e9601dc293eb98a09defb59ef/mytechia-commons-library-1.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="1806e6005023c47e9601dc293eb98a09defb59ef">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/mytechia-commons-library-1.3.0_e6fa47a13472290358dcbdb12f00f64a231f12bf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_a3974eaad2c012d7de70ae2b3ae9b338a7df01b5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_a0db32f47303aef00f6b0dc6f67672161d5b7903/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.7/2b8019b6249bb05d81d3a3094e468753e2b21311/slf4j-api-1.7.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="2b8019b6249bb05d81d3a3094e468753e2b21311">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/slf4j-api-1.7.7_11971058a079b9a6b01d19f0a0780f7376762d27/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="42d8cec736a5ed2c7f5f4496cdfd7a6fa01060fd">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_3c1489623a23b928cfac7f47757faab20bf64cb4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/.gradle/caches/modules-2/files-2.1/org.twitter4j/twitter4j-core/4.0.5/38ce9fec8445c84399f3aaf075fc2e0d9ed81646/twitter4j-core-4.0.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="38ce9fec8445c84399f3aaf075fc2e0d9ed81646">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/twitter4j-core-4.0.5_2e831d9d0ff7602ea24331a748a5e6ef0bb95238/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.github.yesidlazaro/GmailBackground/1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8d1c22bbd985c22b78a55db8ce634614a9724834">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.yesidlazaro-GmailBackground-1.1_5695d6dd65778fe0417ef424dc0db490dfab3242/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.github.yesidlazaro/GmailBackground/1.1/jars/libs/mail.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="bff72833aa12ac9cebb002a884c3c9f058e321f3">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/mail_e0d3ef4bb1b399baf99e6ecd5ac7ef25ef5ec7fc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_13664fed1068c727332f859f7565f7fad4a98d14/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_9e7fb5727379622ff2f3974832d60e98343d163d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/.gradle/caches/modules-2/files-2.1/org.picocontainer/picocontainer/2.8/dde9670fa47be984081ad29db55cfd3e2175bc28/picocontainer-2.8.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="dde9670fa47be984081ad29db55cfd3e2175bc28">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/picocontainer-2.8_1f8085fa581e413a6a4b4d49eeef2fb009342264/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/.gradle/caches/modules-2/files-2.1/com.mytechia/robobo-rob-interface/0.2.3/891471c86d1c821378530b30092c3c4cbd59b72c/robobo-rob-interface-0.2.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="891471c86d1c821378530b30092c3c4cbd59b72c">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/robobo-rob-interface-0.2.3_947d904b1056a0ccfeba01c655a881b03ca9d740/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.github.yesidlazaro/GmailBackground/1.1/jars/libs/activation.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="307f5fe0fb2cc7444f0adcce69e0bcfaad1ff84c">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/activation_4e365bfcef1669e622c7385c0e4faa61ae539240/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_60de4c61126a503925149e1126f0a3f09bc4c387/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/.gradle/caches/modules-2/files-2.1/com.mytechia/simple-message-protocol/2.0.3/87251c14140c3e0a2124a67541e55a5d0b0c5a6c/simple-message-protocol-2.0.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="87251c14140c3e0a2124a67541e55a5d0b0c5a6c">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/simple-message-protocol-2.0.3_5d8c4acac46632ab21c6751ceed612164f959ba9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.1.3/e3c02049f2dbbc764681b40094ecf0dcbc99b157/logback-core-1.1.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e3c02049f2dbbc764681b40094ecf0dcbc99b157">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/logback-core-1.1.3_8d76b78de2a433f6dbf2e9936cd1a288191142c2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_8918d00f12101255bb2c727b081c63508e2842d5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.github.yesidlazaro/GmailBackground/1.1/jars/libs/additionnal.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8cef68843fe969bd8ed302daa1d87da3d9f4c348">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/additionnal_55aaaab06e34ca7e0aa11f26e3359a6895018195/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/.gradle/caches/modules-2/files-2.1/com.mytechia/robobo-util/0.1.0/fee00627d8d022bbf6b6e068a85778fe5e1f36e6/robobo-util-0.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fee00627d8d022bbf6b6e068a85778fe5e1f36e6">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/robobo-util-0.1.0_04b44f4690740ea0847401729bd373e56edc1646/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.mytechia/robobo-framework/0.3.5/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a5176f8027b4103aa7721900b4547e3f1979958f">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.mytechia-robobo-framework-0.3.5_82a1f6bfd8d613b7b92a2544a1400c29ad2c3fd3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_0c00184834c95b96ea0d91bbdb0ff6232528dea9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_8172289269a256e2cd9e2e570a1a6d9343463d78/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_96a62ca38cbe5b1bf36c3d53d2b87eb71dc2b436/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_a565eda5897394ad2b3f193cd86e3c511aa548b7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/.gradle/caches/modules-2/files-2.1/org.twitter4j/twitter4j-stream/4.0.5/428abc9608e278d31b22a9d34b8585ff829d9d8e/twitter4j-stream-4.0.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="428abc9608e278d31b22a9d34b8585ff829d9d8e">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/twitter4j-stream-4.0.5_2521861be6b4d53a5739fa047658a0a1bd2d2358/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/.gradle/caches/modules-2/files-2.1/com.mytechia/mytechia-commons-di/1.3.0/d743f7d697dfdd7021d31c9ff6174734e6589b01/mytechia-commons-di-1.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d743f7d697dfdd7021d31c9ff6174734e6589b01">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/mytechia-commons-di-1.3.0_560109be55bf62a4f877626f45464b9e49f6b36c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_7789b218de9ec940d056f3109d1130823bdbd361/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_dbfb23205a8a7bd6b660184d897e3ff9c26be25a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_b92c8fe0b81c2a3c4e7381ad6643010b7b345347/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="673baa169b06d27c9c7dddf85e0d6fd00d3d0dce">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f149ff847ffba5a2cebb17db6e3be7a8d5a43e06/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_6690285b245ea9c602ed64bc89acd09a15d0b6ff/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_d63d4f9c95fa30ed21500e0c68d9fb7adabe4aec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/luis/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.1.3/d90276fff414f06cb375f2057f6778cd63c6082f/logback-classic-1.1.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d90276fff414f06cb375f2057f6778cd63c6082f">
+        <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/logback-classic-1.1.3_fb9d0ab3ab0a724aa86985d08319e997f4059cf7/classes.dex" />
+    </item>
+
+</items>
