@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="picocontainer-2.8">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.picocontainer/picocontainer/2.8/dde9670fa47be984081ad29db55cfd3e2175bc28/picocontainer-2.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.picocontainer/picocontainer/2.8/9351d6bfd3f9a86b73046203d4aea133969c1c30/picocontainer-2.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

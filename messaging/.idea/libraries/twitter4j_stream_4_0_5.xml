@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="twitter4j-stream-4.0.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.twitter4j/twitter4j-stream/4.0.5/428abc9608e278d31b22a9d34b8585ff829d9d8e/twitter4j-stream-4.0.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.twitter4j/twitter4j-stream/4.0.5/605d3ed0665f2ea4d321f1a01969dcb98cecc0e7/twitter4j-stream-4.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

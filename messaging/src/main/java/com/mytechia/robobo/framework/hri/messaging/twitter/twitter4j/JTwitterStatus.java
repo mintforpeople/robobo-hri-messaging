@@ -32,6 +32,9 @@ import twitter4j.Status;
  * Created by luis on 2/11/16.
  */
 
+/**
+ * Class representing the twitter status
+ */
 public class JTwitterStatus implements IStatus {
     private String author;
     private String message;

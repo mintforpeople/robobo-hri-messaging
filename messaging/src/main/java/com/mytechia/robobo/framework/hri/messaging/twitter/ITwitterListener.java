@@ -25,10 +25,19 @@ package com.mytechia.robobo.framework.hri.messaging.twitter;
 import java.util.ArrayList;
 
 /**
- * Created by luis on 31/10/16.
+ * Interface for the mention listener
  */
 
 public interface ITwitterListener {
+    /**
+     * Called when a new mention is received
+     * @param mentions The mention
+     */
     public void onNewMention(IStatus mentions);
+
+    /**
+     * Called when multiple mentions are received
+     * @param mentions A list with the mentions
+     */
     public void onMultipleMentions(ArrayList<IStatus> mentions);
 }

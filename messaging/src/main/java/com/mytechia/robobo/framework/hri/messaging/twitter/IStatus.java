@@ -25,7 +25,7 @@ package com.mytechia.robobo.framework.hri.messaging.twitter;
 import java.util.Date;
 
 /**
- * Created by luis on 2/11/16.
+ * Interface for thw twitter status
  */
 
 public interface IStatus {

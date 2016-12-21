@@ -24,14 +24,42 @@ package com.mytechia.robobo.framework.hri.messaging.twitter;
 import com.mytechia.robobo.framework.IModule;
 
 /**
- * Created by luis on 28/10/16.
+ * Interface of the ROBOBO Twitter module
  */
 
 public interface ITwitterModule extends IModule{
+    /**
+     * Suscribes a listener to the mention notifications
+     * @param listener The listener to be added
+     */
     public void suscribe(ITwitterListener listener);
+
+    /**
+     * Unsuscribes a listener from the mention notifications
+     * @param listener The listener to be removed
+     */
     public void unsuscribe(ITwitterListener listener);
+
+    /**
+     * Posts a new status to twitter
+     * @param message The message
+     * @return Boolean representing the success of the operation
+     */
     public boolean updateStatus(String message);
+
+    /**
+     * Checks for new mentions
+     */
     public void checkMentions();
+
+    /**
+     * Sets the delay between auto mention chacks
+     * @param milliseconds The time in milliseconds
+     */
     public void setAutoCheckDelay(long milliseconds);
+
+    /**
+     * Sets the twitter module to streaming mode
+     */
     public void setStreaming();
 }

@@ -43,7 +43,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="1696b29fbdfe8548982f2e61d691842310f3d4e0">
+        sha1="42d8cec736a5ed2c7f5f4496cdfd7a6fa01060fd">
         <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_3c1489623a23b928cfac7f47757faab20bf64cb4/classes.dex" />
     </item>
     <item
@@ -268,7 +268,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="8fa485f9a7a2e904fc131d473fa477cb7b9a987a">
+        sha1="673baa169b06d27c9c7dddf85e0d6fd00d3d0dce">
         <dex dex="/home/luis/StudioProjects/robobo-hri-messaging/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f149ff847ffba5a2cebb17db6e3be7a8d5a43e06/classes.dex" />
     </item>
     <item

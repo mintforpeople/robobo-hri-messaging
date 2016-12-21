@@ -6,6 +6,9 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceView;
 import android.view.TextureView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -34,24 +37,29 @@ public class TestActivity extends AppCompatActivity implements ITwitterListener 
 
     private RelativeLayout rellayout = null;
     private TextView textView = null;
-    private SurfaceView surfaceView = null;
-    private ImageView imageView = null;
-    private TextureView textureView = null;
+    private EditText editText = null;
+    private Button button = null;
+    private Button startbutton = null;
 
     private boolean paused = true;
     private long lastDetection = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_robobo_custom_main);
+        setContentView(R.layout.activity_test);
         this.textView = (TextView) findViewById(R.id.textView);
         this.rellayout = (RelativeLayout) findViewById(R.id.rellayout);
+
+        this.textView = (TextView) findViewById(R.id.text);
+        this.editText = (EditText) findViewById(R.id.editText);
+        this.button = (Button) findViewById(R.id.button);
+        this.startbutton = (Button) findViewById(R.id.startbutton);
         // this.surfaceView = (SurfaceView) findViewById(R.id.surfaceView);
-        this.imageView = (ImageView) findViewById(R.id.imageView);
+
 
 //        this.textureView = (TextureView) findViewById(R.id.textureView);
-        roboboHelper = new RoboboServiceHelper(this, new RoboboServiceHelper.Listener() {
-            @Override
+            roboboHelper = new RoboboServiceHelper(this, new RoboboServiceHelper.Listener() {
+                @Override
             public void onRoboboManagerStarted(RoboboManager robobo) {
 
                 //the robobo service and manager have been started up
@@ -90,10 +98,32 @@ public class TestActivity extends AppCompatActivity implements ITwitterListener 
             e.printStackTrace();
         }
 
+//
+//        twitterModule.suscribe(this);
+//
+//        runOnUiThread(new Runnable() {
+//            @Override
+//            public void run() {
+//                textView.setText(twitterModule.getAuthURL());
+//            }
+//        });
 
-        twitterModule.suscribe(this);
-
-        twitterModule.setStreaming();
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.d(TAG,editText.getText().toString());
+//                twitterModule.setAuthPin(editText.getText().toString());
+//                //twitterModule.setStreaming();
+//            }
+//        });
+//
+//        startbutton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //twitterModule.setStreaming();
+//                twitterModule.updateStatus("TEST");
+//            }
+//        });
 
     }
 

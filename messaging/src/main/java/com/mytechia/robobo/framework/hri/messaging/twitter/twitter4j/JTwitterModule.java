@@ -63,9 +63,8 @@ import twitter4j.conf.Configuration;
 import twitter4j.conf.ConfigurationBuilder;
 
 /**
- * Created by luis on 28/10/16.
+ * Implementation of the Robobo Twitter module
  */
-
 public class JTwitterModule extends ATwitterModule implements UserStreamListener {
 
     //region VAR
@@ -216,14 +215,14 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
     }
     //endregion
 
-//region UserStream Listeners
-@Override
-public void onStatus(Status status) {
-    System.out.println("onStatus @" + status.getUser().getScreenName() + " - " + status.getText());
-    if (status.getText().contains("@"+name)){
-        notifyMention(new JTwitterStatus(status));
-    };
-}
+    //region UserStream Listeners
+    @Override
+    public void onStatus(Status status) {
+        System.out.println("onStatus @" + status.getUser().getScreenName() + " - " + status.getText());
+        if (status.getText().contains("@"+name)){
+            notifyMention(new JTwitterStatus(status));
+        };
+    }
 
     @Override
     public void onDeletionNotice(StatusDeletionNotice statusDeletionNotice) {

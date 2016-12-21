@@ -29,7 +29,7 @@ import java.util.HashSet;
 import java.util.List;
 
 /**
- * Created by luis on 28/10/16.
+ * Abstract class that manages the listeners
  */
 
 public abstract class ATwitterModule implements ITwitterModule{
@@ -50,11 +50,20 @@ public abstract class ATwitterModule implements ITwitterModule{
         listeners.remove(listener);
     }
 
+    /**
+     * Notifies the listeners of multiple mentions
+     * @param mentions List of the mentions
+     */
     public void notifyMultipleMentions(ArrayList<IStatus> mentions){
         for (ITwitterListener listener:listeners){
             listener.onMultipleMentions(mentions);
         }
     }
+
+    /**
+     * Notifies the listeners of a single mention
+     * @param mention The mention
+     */
     public void notifyMention(IStatus mention){
         for (ITwitterListener listener:listeners){
             listener.onNewMention(mention);
