@@ -49,11 +49,13 @@ public class GmailBackgroundMessagingModule extends AMessagingModule {
     private String TAG = "GmailMessagingModule";
     private String mailDirection;
     private String mailPassword;
+
+    private RoboboManager m;
     //endregion
     //region IMessagingModule Methods
     @Override
     public void sendMessage(String text, String addresee) {
-        Log.d(TAG,"SENDMESSAGE");
+        m.log(TAG,"SENDMESSAGE");
         BackgroundMail.newBuilder(context)
                 .withUsername(mailDirection)
                 .withPassword(mailPassword)
@@ -78,7 +80,7 @@ public class GmailBackgroundMessagingModule extends AMessagingModule {
     @Override
     public void sendMessage(String text, String addresee, Bitmap photoAtachment) {
         String imagepath = saveToExternalStorage(photoAtachment);
-        Log.d(TAG,"SENDMESSAGE");
+        m.log(TAG,"SENDMESSAGE");
         BackgroundMail.newBuilder(context)
                 .withUsername(mailDirection)
                 .withPassword(mailPassword)
@@ -132,6 +134,7 @@ public class GmailBackgroundMessagingModule extends AMessagingModule {
     @Override
     public void startup(RoboboManager manager) throws InternalErrorException {
 
+        m = manager;
         Properties properties = new Properties();
         AssetManager assetManager = manager.getApplicationContext().getAssets();
 
@@ -160,7 +163,7 @@ public class GmailBackgroundMessagingModule extends AMessagingModule {
 
     @Override
     public String getModuleVersion() {
-        return "v0.1";
+        return "0.3.0";
     }
     //endregion
     private class RandomString {

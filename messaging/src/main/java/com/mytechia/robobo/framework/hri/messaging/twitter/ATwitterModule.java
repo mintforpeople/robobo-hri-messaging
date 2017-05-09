@@ -24,6 +24,8 @@ package com.mytechia.robobo.framework.hri.messaging.twitter;
 
 import android.util.Log;
 
+import com.mytechia.robobo.framework.RoboboManager;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -35,6 +37,7 @@ import java.util.List;
 public abstract class ATwitterModule implements ITwitterModule{
     private HashSet<ITwitterListener> listeners;
 
+    protected RoboboManager m;
     public ATwitterModule(){
         listeners = new HashSet<ITwitterListener>();
     }

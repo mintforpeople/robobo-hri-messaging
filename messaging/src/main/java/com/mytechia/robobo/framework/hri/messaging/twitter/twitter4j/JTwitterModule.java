@@ -29,6 +29,7 @@ import android.util.Log;
 import android.widget.TabWidget;
 
 import com.mytechia.commons.framework.exception.InternalErrorException;
+import com.mytechia.robobo.framework.LogLvl;
 import com.mytechia.robobo.framework.RoboboManager;
 
 import java.io.IOException;
@@ -81,6 +82,7 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
     //region IModule Methods
     @Override
     public void startup(RoboboManager manager) throws InternalErrorException {
+        m = manager;
         Properties properties = new Properties();
         AssetManager assetManager = manager.getApplicationContext().getAssets();
 
@@ -102,7 +104,7 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
 //        cb.setUser(name);
 
         cb.setDebugEnabled(true);
-        Log.d(TAG,"CB Ready");
+        m.log(TAG,"CB Ready");
 
         Configuration c  = cb.build();
         OAuthAuthorization auth = new OAuthAuthorization(c);
@@ -117,17 +119,17 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
 
     @Override
     public void shutdown() throws InternalErrorException {
-
+        twitterStream.shutdown();
     }
 
     @Override
     public String getModuleInfo() {
-        return null;
+        return "JTwitter Module";
     }
 
     @Override
     public String getModuleVersion() {
-        return null;
+        return "0.3.0";
     }
 
 
@@ -158,7 +160,7 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
 
     @Override
     public void checkMentions() {
-        Log.d(TAG,"Checking Mentions");
+        m.log(TAG,"Checking Mentions");
         new AsyncTask<Void, Void, Boolean>(){
 
             @Override
@@ -172,7 +174,7 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
                     int i = 0;
 
                     while (timeline.get(i).getCreatedAt().after(lastDateChecked)){
-                        Log.d(TAG, "Dentro del bucle");
+
                         twitter4j.Status s =timeline.get(i);
                         if (first){
                             first = false;
@@ -218,7 +220,7 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
     //region UserStream Listeners
     @Override
     public void onStatus(Status status) {
-        System.out.println("onStatus @" + status.getUser().getScreenName() + " - " + status.getText());
+        m.log(LogLvl.TRACE, TAG, "onStatus @" + status.getUser().getScreenName() + " - " + status.getText());
         if (status.getText().contains("@"+name)){
             notifyMention(new JTwitterStatus(status));
         };
@@ -226,41 +228,40 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
 
     @Override
     public void onDeletionNotice(StatusDeletionNotice statusDeletionNotice) {
-        System.out.println("Got a status deletion notice id:" + statusDeletionNotice.getStatusId());
+        m.log(LogLvl.TRACE, TAG, "Got a status deletion notice id:" + statusDeletionNotice.getStatusId());
     }
 
     @Override
     public void onDeletionNotice(long directMessageId, long userId) {
-        System.out.println("Got a direct message deletion notice id:" + directMessageId);
+        m.log(LogLvl.TRACE, TAG, "Got a direct message deletion notice id:" + directMessageId);
     }
 
     @Override
     public void onTrackLimitationNotice(int numberOfLimitedStatuses) {
-        System.out.println("Got a track limitation notice:" + numberOfLimitedStatuses);
+        m.log(LogLvl.TRACE, TAG, "Got a track limitation notice:" + numberOfLimitedStatuses);
     }
 
     @Override
     public void onScrubGeo(long userId, long upToStatusId) {
-        System.out.println("Got scrub_geo event userId:" + userId + " upToStatusId:" + upToStatusId);
+        m.log(LogLvl.TRACE, TAG, "Got scrub_geo event userId:" + userId + " upToStatusId:" + upToStatusId);
     }
 
     @Override
     public void onStallWarning(StallWarning warning) {
-        System.out.println("Got stall warning:" + warning);
+        m.log(LogLvl.TRACE, TAG, "Got stall warning:" + warning);
     }
 
     @Override
     public void onFriendList(long[] friendIds) {
-        System.out.print("onFriendList");
+        m.log(LogLvl.TRACE, TAG, "onFriendList");
         for (long friendId : friendIds) {
-            System.out.print(" " + friendId);
+            m.log(LogLvl.TRACE, TAG, " " + friendId);
         }
-        System.out.println();
     }
 
     @Override
     public void onFavorite(User source, User target, Status favoritedStatus) {
-        System.out.println("onFavorite source:@"
+        m.log(LogLvl.TRACE, TAG, "onFavorite source:@"
                 + source.getScreenName() + " target:@"
                 + target.getScreenName() + " @"
                 + favoritedStatus.getUser().getScreenName() + " - "
@@ -269,7 +270,7 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
 
     @Override
     public void onUnfavorite(User source, User target, Status unfavoritedStatus) {
-        System.out.println("onUnFavorite source:@"
+        m.log(LogLvl.TRACE, TAG, "onUnFavorite source:@"
                 + source.getScreenName() + " target:@"
                 + target.getScreenName() + " @"
                 + unfavoritedStatus.getUser().getScreenName()
@@ -278,27 +279,27 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
 
     @Override
     public void onFollow(User source, User followedUser) {
-        System.out.println("onFollow source:@"
+        m.log(LogLvl.TRACE, TAG, "onFollow source:@"
                 + source.getScreenName() + " target:@"
                 + followedUser.getScreenName());
     }
 
     @Override
     public void onUnfollow(User source, User followedUser) {
-        System.out.println("onFollow source:@"
+        m.log(LogLvl.TRACE, TAG, "onFollow source:@"
                 + source.getScreenName() + " target:@"
                 + followedUser.getScreenName());
     }
 
     @Override
     public void onDirectMessage(DirectMessage directMessage) {
-        System.out.println("onDirectMessage text:"
+        m.log(LogLvl.TRACE, TAG, "onDirectMessage text:"
                 + directMessage.getText());
     }
 
     @Override
     public void onUserListMemberAddition(User addedMember, User listOwner, UserList list) {
-        System.out.println("onUserListMemberAddition added member:@"
+        m.log(LogLvl.TRACE, TAG, "onUserListMemberAddition added member:@"
                 + addedMember.getScreenName()
                 + " listOwner:@" + listOwner.getScreenName()
                 + " list:" + list.getName());
@@ -306,7 +307,7 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
 
     @Override
     public void onUserListMemberDeletion(User deletedMember, User listOwner, UserList list) {
-        System.out.println("onUserListMemberDeleted deleted member:@"
+        m.log(LogLvl.TRACE, TAG, "onUserListMemberDeleted deleted member:@"
                 + deletedMember.getScreenName()
                 + " listOwner:@" + listOwner.getScreenName()
                 + " list:" + list.getName());
@@ -314,7 +315,7 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
 
     @Override
     public void onUserListSubscription(User subscriber, User listOwner, UserList list) {
-        System.out.println("onUserListSubscribed subscriber:@"
+        m.log(LogLvl.TRACE, TAG, "onUserListSubscribed subscriber:@"
                 + subscriber.getScreenName()
                 + " listOwner:@" + listOwner.getScreenName()
                 + " list:" + list.getName());
@@ -322,7 +323,7 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
 
     @Override
     public void onUserListUnsubscription(User subscriber, User listOwner, UserList list) {
-        System.out.println("onUserListUnsubscribed subscriber:@"
+        m.log(LogLvl.TRACE, TAG, "onUserListUnsubscribed subscriber:@"
                 + subscriber.getScreenName()
                 + " listOwner:@" + listOwner.getScreenName()
                 + " list:" + list.getName());
@@ -330,55 +331,55 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
 
     @Override
     public void onUserListCreation(User listOwner, UserList list) {
-        System.out.println("onUserListCreated  listOwner:@"
+        m.log(LogLvl.TRACE, TAG, "onUserListCreated  listOwner:@"
                 + listOwner.getScreenName()
                 + " list:" + list.getName());
     }
 
     @Override
     public void onUserListUpdate(User listOwner, UserList list) {
-        System.out.println("onUserListUpdated  listOwner:@"
+        m.log(LogLvl.TRACE, TAG, "onUserListUpdated  listOwner:@"
                 + listOwner.getScreenName()
                 + " list:" + list.getName());
     }
 
     @Override
     public void onUserListDeletion(User listOwner, UserList list) {
-        System.out.println("onUserListDestroyed  listOwner:@"
+        m.log(LogLvl.TRACE, TAG, "onUserListDestroyed  listOwner:@"
                 + listOwner.getScreenName()
                 + " list:" + list.getName());
     }
 
     @Override
     public void onUserProfileUpdate(User updatedUser) {
-        System.out.println("onUserProfileUpdated user:@" + updatedUser.getScreenName());
+        m.log(LogLvl.TRACE, TAG, "onUserProfileUpdated user:@" + updatedUser.getScreenName());
     }
 
     @Override
     public void onUserDeletion(long deletedUser) {
-        System.out.println("onUserDeletion user:@" + deletedUser);
+        m.log(LogLvl.TRACE, TAG, "onUserDeletion user:@" + deletedUser);
     }
 
     @Override
     public void onUserSuspension(long suspendedUser) {
-        System.out.println("onUserSuspension user:@" + suspendedUser);
+        m.log(LogLvl.TRACE, TAG, "onUserSuspension user:@" + suspendedUser);
     }
 
     @Override
     public void onBlock(User source, User blockedUser) {
-        System.out.println("onBlock source:@" + source.getScreenName()
+        m.log(LogLvl.TRACE, TAG, "onBlock source:@" + source.getScreenName()
                 + " target:@" + blockedUser.getScreenName());
     }
 
     @Override
     public void onUnblock(User source, User unblockedUser) {
-        System.out.println("onUnblock source:@" + source.getScreenName()
+        m.log(LogLvl.TRACE, TAG, "onUnblock source:@" + source.getScreenName()
                 + " target:@" + unblockedUser.getScreenName());
     }
 
     @Override
     public void onRetweetedRetweet(User source, User target, Status retweetedStatus) {
-        System.out.println("onRetweetedRetweet source:@" + source.getScreenName()
+        m.log(LogLvl.TRACE, TAG, "onRetweetedRetweet source:@" + source.getScreenName()
                 + " target:@" + target.getScreenName()
                 + retweetedStatus.getUser().getScreenName()
                 + " - " + retweetedStatus.getText());
@@ -386,7 +387,7 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
 
     @Override
     public void onFavoritedRetweet(User source, User target, Status favoritedRetweet) {
-        System.out.println("onFavroitedRetweet source:@" + source.getScreenName()
+        m.log(LogLvl.TRACE, TAG, "onFavroitedRetweet source:@" + source.getScreenName()
                 + " target:@" + target.getScreenName()
                 + favoritedRetweet.getUser().getScreenName()
                 + " - " + favoritedRetweet.getText());
@@ -394,7 +395,7 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
 
     @Override
     public void onQuotedTweet(User source, User target, Status quotingTweet) {
-        System.out.println("onQuotedTweet" + source.getScreenName()
+        m.log(LogLvl.TRACE, TAG, "onQuotedTweet" + source.getScreenName()
                 + " target:@" + target.getScreenName()
                 + quotingTweet.getUser().getScreenName()
                 + " - " + quotingTweet.getText());
@@ -403,7 +404,7 @@ public class JTwitterModule extends ATwitterModule implements UserStreamListener
     @Override
     public void onException(Exception ex) {
         ex.printStackTrace();
-        System.out.println("onException:" + ex.getMessage());
+        m.log(LogLvl.TRACE, TAG, "onException:" + ex.getMessage());
     }
 
     //endregion
